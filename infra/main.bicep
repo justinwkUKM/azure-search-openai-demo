@@ -11,14 +11,14 @@ param location string
 
 param appServicePlanName string = '' // Set in main.parameters.json
 param backendServiceName string = '' // Set in main.parameters.json
-param resourceGroupName string = 'rg-maaden-poc-2' // Set in main.parameters.json
+param resourceGroupName string = '' // Set in main.parameters.json
 
 param applicationInsightsDashboardName string = '' // Set in main.parameters.json
 param applicationInsightsName string = '' // Set in main.parameters.json
 param logAnalyticsName string = '' // Set in main.parameters.json
 
 param searchServiceName string = '' // Set in main.parameters.json
-param searchServiceResourceGroupName string = 'rg-maaden-poc-2' // Set in main.parameters.json
+param searchServiceResourceGroupName string = '' // Set in main.parameters.json
 param searchServiceLocation string = '' // Set in main.parameters.json
 // The free tier does not support managed identity (required) or semantic search (optional)
 @allowed([ 'free', 'basic', 'standard', 'standard2', 'standard3', 'storage_optimized_l1', 'storage_optimized_l2' ])
@@ -30,7 +30,7 @@ param searchServiceSemanticRankerLevel string // Set in main.parameters.json
 var actualSearchServiceSemanticRankerLevel = (searchServiceSkuName == 'free') ? 'disabled' : searchServiceSemanticRankerLevel
 
 param storageAccountName string = '' // Set in main.parameters.json
-param storageResourceGroupName string = 'rg-maaden-poc-2' // Set in main.parameters.json
+param storageResourceGroupName string = '' // Set in main.parameters.json
 param storageResourceGroupLocation string = location
 param storageContainerName string = 'content'
 param storageSkuName string // Set in main.parameters.json
@@ -49,9 +49,9 @@ param azureOpenAiApiVersion string = ''
 @secure()
 param azureOpenAiApiKey string = ''
 param openAiServiceName string = ''
-param openAiResourceGroupName string = 'rg-maaden-poc-2'
+param openAiResourceGroupName string = ''
 
-param speechServiceResourceGroupName string = 'rg-maaden-poc-2'
+param speechServiceResourceGroupName string = ''
 param speechServiceLocation string = ''
 param speechServiceName string = ''
 param speechServiceSkuName string // Set in main.parameters.json
@@ -73,7 +73,7 @@ param openAiApiKey string = ''
 param openAiApiOrganization string = ''
 
 param documentIntelligenceServiceName string = '' // Set in main.parameters.json
-param documentIntelligenceResourceGroupName string = 'rg-maaden-poc-2' // Set in main.parameters.json
+param documentIntelligenceResourceGroupName string = '' // Set in main.parameters.json
 
 // Limited regions for new version:
 // https://learn.microsoft.com/azure/ai-services/document-intelligence/concept-layout
@@ -89,7 +89,7 @@ param documentIntelligenceResourceGroupLocation string
 param documentIntelligenceSkuName string // Set in main.parameters.json
 
 param computerVisionServiceName string = '' // Set in main.parameters.json
-param computerVisionResourceGroupName string = 'rg-maaden-poc-2' // Set in main.parameters.json
+param computerVisionResourceGroupName string = '' // Set in main.parameters.json
 param computerVisionResourceGroupLocation string = '' // Set in main.parameters.json
 param computerVisionSkuName string // Set in main.parameters.json
 
