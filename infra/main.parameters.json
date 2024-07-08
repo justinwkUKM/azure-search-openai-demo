@@ -6,7 +6,7 @@
       "value": "${AZURE_ENV_NAME}"
     },
     "resourceGroupName": {
-      "value": "rg-maaden-poc-2"
+      "value": "${AZURE_RESOURCE_GROUP}"
     },
     "location": {
       "value": "${AZURE_LOCATION}"
