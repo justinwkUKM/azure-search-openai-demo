@@ -186,7 +186,13 @@ param useLocalHtmlParser bool = false
 
 var abbrs = loadJsonContent('abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
-var tags = { 'azd-env-name': environmentName }
+// var tags = { 'azd-env-name': environmentName }
+var tags = {
+  'azd-env-name': 'Dev'
+  'Project_Code': 'chatbot'
+  'environment': 'Dev'
+  'Owner': 'wobeidy@mobizinc.com'
+}
 
 var tenantIdForAuth = !empty(authTenantId) ? authTenantId : tenantId
 var authenticationIssuerUri = '${environment().authentication.loginEndpoint}${tenantIdForAuth}/v2.0'
